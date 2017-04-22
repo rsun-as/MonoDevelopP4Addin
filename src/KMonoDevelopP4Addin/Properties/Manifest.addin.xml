@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Addin name="P4 Addin"
+		id="KMonoDevelopP4Addin" 
+       namespace="P4Addin"
+       author="Rich Sun" 
+       copyright="See License" 
+       description="Simple Perforce Actions for P4 in MonoDevelop.  Expects p4 commandline installed in path, with user executable permissions (0.1c)" 
+       category="Version Control"
+       url= "https://github.com/rsun-as/MonoDevelopP4Addin"
+       version="0.1" 
+       flags="None">
+	<Runtime>	
+		<Import assembly="KMonoDevelopP4Addin.dll" />
+	</Runtime>
+    <Dependencies>
+		<Addin id="::MonoDevelop.Core" version="5.0" />
+		<Addin id="::MonoDevelop.Ide" version="5.0" />
+    </Dependencies>
+
+    <Extension path="/MonoDevelop/Core/FileSystemExtensions">
+		<Class class="KMonoDevelopP4Addin.P4FileSystemExtension" insertbefore="MonoDevelop.Ide.Projects.IdeFileSystemExtensionExtension"/>
+	</Extension>
+
+
+	<Extension path = "/MonoDevelop/Ide/Commands/VersionControl">  
+        <Command id = "KMonoDevelopP4Addin.P4Commands.Checkout"  
+                 _label = "P4 Checkout"  
+                 _description = "Check out current file"
+				 shortcut = "Control|E"
+				 macShortcut = "Control|E"
+                 defaultHandler = "KMonoDevelopP4Addin.P4CheckoutHandler"
+                  />  
+
+        <Command id = "KMonoDevelopP4Addin.P4Commands.Add"  
+                 _label = "P4 Add"  
+                 _description = "Add new file to p4"
+                 defaultHandler = "KMonoDevelopP4Addin.P4AddHandler"
+	                  />  
+        <Command id = "KMonoDevelopP4Addin.P4Commands.Revert"  
+                 _label = "P4 Revert"  
+                 _description = "Revert current file"
+                 defaultHandler = "KMonoDevelopP4Addin.P4RevertHandler"
+	                  />  
+        <Command id = "KMonoDevelopP4Addin.P4Commands.Settings"  
+                 _label = "P4 Show Current Settings"  
+                 _description = "Show Current Settings from p4 set"
+                  defaultHandler = "KMonoDevelopP4Addin.P4ShowSettingsHandler" />  
+    </Extension> 
+
+    <Extension path = "/MonoDevelop/Ide/MainMenu/VersionControl">  
+        <CommandItem id="KMonoDevelopP4Addin.P4Commands.Checkout" 
+             insertbefore = "MonoDevelop.VersionControl.Commands.Checkout"/>  
+        <CommandItem id="KMonoDevelopP4Addin.P4Commands.Add"   
+             insertbefore = "MonoDevelop.VersionControl.Commands.Checkout"/>  
+        <CommandItem id="KMonoDevelopP4Addin.P4Commands.Revert"   
+             insertbefore = "MonoDevelop.VersionControl.Commands.Checkout"/>  
+        <CommandItem id="KMonoDevelopP4Addin.P4Commands.Settings"   
+             insertbefore = "MonoDevelop.VersionControl.Commands.Checkout"/>  
+
+		<SeparatorItem insertbefore = "MonoDevelop.VersionControl.Commands.Checkout"/>
+
+    </Extension>
+
+	<Extension path = "/MonoDevelop/Ide/ContextMenu/ProjectPad/VersionControl">
+		<CommandItem id="KMonoDevelopP4Addin.P4Commands.Checkout" />  
+        <CommandItem id="KMonoDevelopP4Addin.P4Commands.Add" />  
+        <CommandItem id="KMonoDevelopP4Addin.P4Commands.Revert" />  
+        <CommandItem id="KMonoDevelopP4Addin.P4Commands.Settings" />  
+	</Extension>
+
+
+</Addin>
