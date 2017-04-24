@@ -26,12 +26,20 @@ In some scenarios, MonoDevelop will modify files under your nose and there's no 
 One such scenario is if you use the code Refactoring tools that MonoDevelop offers.  Under the hood, the refactor system ultimately makes calls directly to the C# OS file calls to write to a temp file and then move it over the original.  There's no opportunity for the plugin to catch this.  There may be other situations where MonoDevelop fails to respect its own internal FileSystem class that would cause this as well, so keep an eye out if using features that modify files beyond editing them directly. 
 
 How to Build the AddIn from Source
-Working on this addin currently requires the AddIn Maker plugin to be installed from the gallery
+Working on this addin currently requires the AddIn Maker plugin to be installed from the gallery.
+If attempting to build with Xamarin Studio, you will have to change the lib references for the MonoDevelop assemblies, as the included libs are from MonoDevelop 5.9.6 packaged with Unity3D.
 
 Without this, the project won't even load.
 At that point, if your configuration in the project is Debug, hitting "run" will automatically open a new MonoDevelop instance w/ the debug addin installed. You can debug as normal.
 If you build in Release, it automatically runs a shell script to package the addin for installing from file.  Note that this script is currently set up to assume Unity is installed in default location (on Mac) at /Applications/Unity.
 NOTE: there's some wacky crap going on, where if the Addin Maker is installed and enabled, it will fail to install without an error.  Disabling the Addin Maker add in temporarily while installing will resolve the issue. Dumb. 
- 
+Building this Addin will be much easier on MacOS.  Ran into some problems on Windows.  It is possible but various little things like Debugging don't seem to work right.
+
+Addin Packaging
+This step happens automatically when building on OSX.  It doesn't on Windows.  Currently it uses PackageAddin.sh shell script to do the work, which normally obviously won't work in Windows.  It also has a hard-coded path to MonoDevelop as distributed by Unity currently on Mac.
+You can also manually package the addin by running:
+     mono {path to monodevelop}/bin/mdtool.exe setup pack bin/Release/KMonoDevelopP4Addin.dll -d:../..
+
+
  
 This Add in was originally written at Kabam, Inc / Aftershock by me and was approved for open sourcing in 2017
