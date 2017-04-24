@@ -44,7 +44,8 @@ Building this Addin will be much easier on MacOS.  Ran into some problems on Win
 This step happens automatically when building on OSX.  It doesn't on Windows.  Currently it uses PackageAddin.sh shell script to do the work, which normally obviously won't work in Windows.  It also has a hard-coded path to MonoDevelop as distributed by Unity currently on Mac.
 
 You can also manually package the addin by running:
-     mono {path to monodevelop}/bin/mdtool.exe setup pack bin/Release/KMonoDevelopP4Addin.dll -d:../..
+
+    mono {path to monodevelop}/bin/mdtool.exe setup pack bin/Release/KMonoDevelopP4Addin.dll -d:../..
 
 
 
