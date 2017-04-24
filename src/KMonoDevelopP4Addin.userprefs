@@ -1,21 +1,27 @@
-﻿<Properties StartupItem="KMonoDevelopP4Addin/KMonoDevelopP4Addin.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="KMonoDevelopP4Addin/handlers/P4AddHandler.cs">
+﻿<Properties StartupConfiguration="{CFC21185-1450-4141-93F8-09D9C7B07C1A}|">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="D:\kbm-devspec\MonoDevelopP4Addin\src\KMonoDevelopP4Addin\PerforceInterface.cs" line="77" column="8" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="KMonoDevelopP4Addin\P4HandlerBase.cs">
     <Files>
-      <File FileName="KMonoDevelopP4Addin/P4HandlerBase.cs" Line="1" Column="1" />
-      <File FileName="KMonoDevelopP4Addin/handlers/P4AddHandler.cs" Line="1" Column="1" />
-      <File FileName="KMonoDevelopP4Addin/handlers/P4CheckoutHandler.cs" Line="1" Column="1" />
-      <File FileName="KMonoDevelopP4Addin/PerforceInterface.cs" Line="11" Column="1" />
-      <File FileName="KMonoDevelopP4Addin/handlers/P4RevertHandler.cs" Line="1" Column="1" />
-      <File FileName="KMonoDevelopP4Addin/P4FileSystemExtension.cs" Line="1" Column="1" />
-      <File FileName="KMonoDevelopP4Addin/P4Commands.cs" Line="1" Column="1" />
-      <File FileName="KMonoDevelopP4Addin/handlers/P4ShowSettingsHandler.cs" Line="1" Column="1" />
-      <File FileName="KMonoDevelopP4Addin/Properties/AssemblyInfo.cs" Line="1" Column="1" />
-      <File FileName="KMonoDevelopP4Addin/Properties/Manifest.addin.xml" Line="1" Column="1" />
+      <File FileName="..\..\p4\wammo\prototype2\Unity\Assets\Scripts\LevelDesign\DungeonPlayer.cs" Line="1" Column="1" />
+      <File FileName="KMonoDevelopP4Addin\P4HandlerBase.cs" Line="2" Column="7" />
+      <File FileName="KMonoDevelopP4Addin\handlers\P4AddHandler.cs" Line="1" Column="1" />
+      <File FileName="KMonoDevelopP4Addin\handlers\P4CheckoutHandler.cs" Line="1" Column="1" />
+      <File FileName="KMonoDevelopP4Addin\PerforceInterface.cs" Line="1" Column="1" />
+      <File FileName="KMonoDevelopP4Addin\handlers\P4RevertHandler.cs" Line="1" Column="1" />
+      <File FileName="KMonoDevelopP4Addin\P4FileSystemExtension.cs" Line="1" Column="1" />
+      <File FileName="KMonoDevelopP4Addin\P4Commands.cs" Line="1" Column="1" />
+      <File FileName="KMonoDevelopP4Addin\handlers\P4ShowSettingsHandler.cs" Line="1" Column="1" />
+      <File FileName="KMonoDevelopP4Addin\Properties\AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="KMonoDevelopP4Addin\Properties\Manifest.addin.xml" Line="1" Column="1" />
+      <File FileName="..\README.md" Line="1" Column="1" />
+      <File FileName="KMonoDevelopP4Addin\PackageAddin.sh" Line="6" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.KMonoDevelopP4Addin PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>
