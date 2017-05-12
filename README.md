@@ -16,6 +16,10 @@ several operations are now available for p4 in the Version Control pulldown, all
  
 ## Some quirky things to be aware of
 
+### Does not use MonoDevelop's built in source control subsystem
+Perforce's check-in/check-out stateful paradigm doesn't fit well with the way MonoDevelop thinks about Source Control.  This AddIn instead deals w/ Perforce outside of that system.  
+It also doesn't currently handle any notion of whether or not any given folder or file is actually IN a Perforce depot folder or not, and will try to operate on any edited file.  The only way to disable this behavior currently is to disable the Addin.  This may be annoying for developers using mixed source control providers on different projects for example.
+
 ### P4 setup.
 Some people have experienced issues with getting their commandline p4 setup functioning correctly.  This does require it to be in your environment path.
 
@@ -50,4 +54,4 @@ You can also manually package the addin by running:
 
 
 
-This Add in was originally written at Kabam, Inc / Aftershock by me and was approved for open sourcing in 2017
+This Add in was originally written at Kabam, Inc / Aftershock LLC by me and was approved for open sourcing in 2017
